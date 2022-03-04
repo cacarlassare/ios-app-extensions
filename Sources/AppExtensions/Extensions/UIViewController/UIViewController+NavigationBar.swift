@@ -15,9 +15,11 @@ public extension UIViewController {
     func setNavBarBackgroundColor(color: UIColor, transitionTime: TimeInterval? = nil) {
         if transitionTime == nil {
             self.navigationController?.navigationBar.barTintColor = color
+            self.setNavBarAppearance(color: color)
         } else {
             UIView.animate(withDuration: transitionTime!, animations: {
                 self.navigationController?.navigationBar.barTintColor = color
+                self.setNavBarAppearance(color: color)
             })
         }
     }
@@ -28,12 +30,12 @@ public extension UIViewController {
         var bounds = self.navigationController?.navigationBar.bounds ?? CGRect(x: 0, y: 0, width: 0, height: 0)
         bounds.size.height += UIApplication.shared.statusBarFrame.size.height
         solidBackground.frame = bounds
-        
         solidBackground.backgroundColor = color
         
         let solidBackgroundImage = solidBackground.asImage()
-        
         self.navigationController?.navigationBar.setBackgroundImage(solidBackgroundImage, for: .default)
+        
+        self.setNavBarAppearance(color: color)
     }
     
     func setNavBarTitle(_ title: String, color: UIColor = UIColor.black, font: UIFont = UIFont.systemFont(ofSize: 17, weight: .semibold)) {
@@ -62,6 +64,20 @@ public extension UIViewController {
         
         if disableSwipeBack {
             self.disableSwipeBack()
+        }
+    }
+    
+    
+    // MARK: - Nav Bar Appearance Function
+    
+    func setNavBarAppearance(color: UIColor) {
+        if #available(iOS 15.0, *) {
+            let appearance = UINavigationBarAppearance()
+            appearance.configureWithOpaqueBackground()
+            appearance.backgroundColor = color
+            
+            self.navigationController?.navigationBar.standardAppearance = appearance
+            self.navigationController?.navigationBar.scrollEdgeAppearance = appearance
         }
     }
 }

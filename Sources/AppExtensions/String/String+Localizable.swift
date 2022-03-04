@@ -23,10 +23,11 @@ public extension String {
     }
     
     fileprivate func localized(for language: String) -> String {
-        let path = Bundle.main.path(forResource: language, ofType: "lproj")!
-        let bundle = Bundle(path: path)!
-        let localizedString = NSLocalizedString(self, bundle: bundle, comment: "")
+        guard let path = Bundle.main.path(forResource: language, ofType: "lproj"), let bundle = Bundle(path: path) else {
+            return NSLocalizedString(self, comment: "")
+        }
         
+        let localizedString = NSLocalizedString(self, bundle: bundle, comment: "")
         return localizedString
     }
 }

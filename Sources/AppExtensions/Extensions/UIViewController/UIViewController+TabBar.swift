@@ -33,4 +33,18 @@ public extension UIViewController {
     func resignTabBarDelegate() {
         self.tabBarController?.delegate = nil
     }
+    
+    
+    // MARK: - Tab Bar Appearance Function
+    
+    func setTabBarAppearance(color: UIColor) {
+        if #available(iOS 15.0, *) {
+            let appearance = UITabBarAppearance()
+            appearance.configureWithOpaqueBackground()
+            appearance.backgroundColor = color
+            
+            self.tabBarController?.tabBar.standardAppearance = appearance
+            self.tabBarController?.tabBar.scrollEdgeAppearance = appearance
+        }
+    }
 }

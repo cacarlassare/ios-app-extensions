@@ -2,7 +2,7 @@
 //  NSAttributedString+Extensions.swift
 //  
 //
-//  Created by Rodrigo Cian Berrios on 07/05/2021.
+//  Created by Cristian Carlassare.
 //
 
 import Foundation

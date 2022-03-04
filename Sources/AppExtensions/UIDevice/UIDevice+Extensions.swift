@@ -2,7 +2,7 @@
 //  UIDevice+Extensions.swift
 //  
 //
-//  Created by Cristian Carlassare on 28/04/2021.
+//  Created by Cristian Carlassare.
 //
 
 import UIKit

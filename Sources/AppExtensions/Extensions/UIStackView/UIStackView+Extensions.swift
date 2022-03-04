@@ -2,7 +2,7 @@
 //  UIStackView+Extensions.swift
 //  
 //
-//  Created by Cristian Carlassare on 10/12/2020.
+//  Created by Cristian Carlassare.
 //
 
 import UIKit

@@ -2,7 +2,7 @@
 //  UIImageView+TintColor.swift
 //  
 //
-//  Created by Rodrigo Cian Berrios on 29/04/2021.
+//  Created by Cristian Carlassare.
 //
 
 import UIKit

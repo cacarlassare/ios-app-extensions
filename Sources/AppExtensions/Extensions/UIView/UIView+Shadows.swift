@@ -2,7 +2,7 @@
 //  UIView+Shadows.swift
 //  
 //
-//  Created by Cristian Carlassare on 15/01/2021.
+//  Created by Cristian Carlassare.
 //
 
 import UIKit

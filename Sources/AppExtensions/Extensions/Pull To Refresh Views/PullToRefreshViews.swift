@@ -2,7 +2,7 @@
 //  PullToRefreshViews.swift
 //  
 //
-//  Created by Cristian Carlassare on 01/10/2021.
+//  Created by Cristian Carlassare.
 //
 
 import UIKit

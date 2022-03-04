@@ -2,7 +2,7 @@
 //  String+FormatterExtensions.swift
 //  
 //
-//  Created by Rodrigo Cian Berrios on 16/03/2021.
+//  Created by Cristian Carlassare.
 //
 
 import UIKit

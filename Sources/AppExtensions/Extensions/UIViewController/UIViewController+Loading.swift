@@ -2,7 +2,7 @@
 //  UIViewController+Loading.swift
 //  
 //
-//  Created by Cristian Carlassare on 26/01/2021.
+//  Created by Cristian Carlassare.
 //
 
 import UIKit
